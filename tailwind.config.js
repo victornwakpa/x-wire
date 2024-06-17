@@ -9,6 +9,7 @@ module.exports = {
         "title-color": "#2A2A2A",
         "lighter": "#888888",
         "light": "#545454",
+        "bgColor": "#F8F8FA", 
       },
       fontFamily: {
         "oleo": ["Oleo Script Swash Caps"],

@@ -8,61 +8,61 @@
   </head>
   <body>
     <div
-      class="container relative flex flex-col items-center justify-center h-dvh px-5 md:hidden"
+      class="container relative flex flex-col items-center justify-center h-dvh py-6 px-5 md:hidden"
     >
-      <div class="py-6">
-        <div class="grid place-items-center">
-          <img
-            class=""
-            src="../assets/logo-light.png"
-            alt="website logo"
-            class="w-24"
-          />
-        </div>
-        <div class="text-center mt-3">
-          <h1 class="text-2xl font-bold">Welcome back</h1>
-          <p class="text-sm text-lighter mt-2">Login to access your account</p>
-        </div>
-
-        <form action="" class="mt-8">
-          <label for="email" class="text-[12px] text-lighter"
-            >Email/Phone Number</label
-          >
-          <input
-            type="text"
-            id="email"
-            class="rounded-full w-full h-12 p-3 border border-light mt-2 mb-5"
-          />
-
-          <label for="password" class="text-[12px] text-lighter"
-            >Password</label
-          >
-          <input
-            type="text"
-            id="password"
-            class="rounded-full w-full h-12 p-3 border border-light mt-2 mb-5"
-          />
-
-          <p class="text-right font-medium text-secondary mb-5 text-[12px]">
-            Forgot Password?
-          </p>
-
-          <button class="btn-primary">Log In</button>
-        </form>
-
-        <p class="my-5 text-center">Or Sign In With</p>
-
-        <button
-          class="btn-primary bg-white border text-[#222222] flex items-center justify-center gap-2"
-        >
-          <img class="" src="../assets/google-logo.png" alt="website logo" />
-          <span>Google</span>
-        </button>
-        <p class="text-sm mt-5 text-center">
-          Don't have an account?
-          <span class="font-bold text-secondary">Sign Up</span>
-        </p>
+      <div class="grid place-items-center w-36">
+        <img
+          class=""
+          src="../assets/logo-light.png"
+          alt="website logo"
+          class="w-24"
+        />
       </div>
+      <div class="text-center mt-3">
+        <h1 class="text-2xl font-bold">Welcome back</h1>
+        <p class="text-sm text-lighter mt-2">Login to access your account</p>
+      </div>
+
+      <form action="" class="mt-8">
+        <label for="email" class="text-[12px] text-lighter"
+          >Email/Phone Number</label
+        >
+        <input type="text" id="email" class="input-primary" />
+
+        <label for="password" class="text-[12px] text-lighter">Password</label>
+        <input type="text" id="password" class="input-primary" />
+
+        <p class="text-right font-medium text-secondary mb-5 text-[12px]">
+          Forgot Password?
+        </p>
+
+        <button class="btn-primary">Log In</button>
+      </form>
+
+      <p class="my-5 text-center">Or Sign In With</p>
+
+      <button
+        class="btn-primary bg-white border text-[#222222] flex items-center justify-center gap-2"
+      >
+        <img class="" src="../assets/google-logo.png" alt="website logo" />
+        <span>Google</span>
+      </button>
+      <p class="text-sm mt-5 text-center">
+        Don't have an account?
+        <span class="font-bold text-secondary">Sign Up</span>
+      </p>
+      <div
+        class="w-28 h-28 bg-primary absolute -top-5 -left-5 rounded-full -z-40 blur-3xl"
+      ></div>
+      <div
+        class="w-36 h-36 bg-blue-800 absolute top-[50%] -left-[10%] rounded-full -z-40 blur-[114px]"
+      ></div>
+      <div
+        class="w-28 h-28 bg-primary absolute -bottom-5 -right-[10%] rounded-full -z-40 blur-3xl"
+      ></div>
+      <div
+        class="w-28 h-28 bg-blue-800 absolute bottom-20 -right-[10%] rounded-full -z-40 blur-[114px]"
+      ></div>
     </div>
   </body>
 </html>
