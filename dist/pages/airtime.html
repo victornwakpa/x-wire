@@ -5,18 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../output.css" />
-    <style>
-      .fixed-bottom {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: #ffffff; /* Adjust based on your design */
-        text-align: center;
-        padding: 10px 0;
-        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow effect */
-      }
-    </style>
   </head>
   <body class="bg-bgColor">
     <div class="container px-5 relative">
@@ -40,21 +28,21 @@
               WILL BE PLACED HERE -->
         </div>
 
-        <form action="" class="mt-8 mb-20"> <!-- Adjust margin-bottom to avoid overlap with fixed button -->
-          <label for="amount" class="text-sm text-gray-10">Amount</label>
-          <input type="text" id="amount" class="input-primary" />
+        <form action="" class="mt-4">
+          <label for="email" class="text-sm text-gray-10">Amount</label>
+          <input type="text" id="email" class="input-primary" />
 
           <label for="network" class="text-sm text-gray-10">Network</label>
           <div class="relative inline-block w-full">
             <select
               id="network"
-              class="bg-gray-50 border border-gray-300 text-gray-10 mt-2 mb-5 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 appearance-none"
+              class="bg-white border border-gray-300 text-gray-10 mt-2 mb-5 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-3 appearance-none"
             >
               <option selected>Choose a Network</option>
-              <option value="MTN">MTN</option>
-              <option value="GLO">GLO</option>
-              <option value="AIRTEL">AIRTEL</option>
-              <option value="9MOBILE">9MOBILE</option>
+              <option value="">MTN</option>
+              <option value="">GLO</option>
+              <option value="">AIRTEL</option>
+              <option value="">9MOBILE</option>
             </select>
             <div
               class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none"
@@ -76,16 +64,13 @@
             </div>
           </div>
 
-          <label for="phoneNumber" class="text-sm text-gray-10">Phone Number</label>
-          <input type="text" id="phoneNumber" class="input-primary" placeholder="0812 345 6789" />
+          <label for="email" class="text-sm text-gray-10">Phone Number</label>
+          <input type="text" id="email" class="input-primary" placeholder="0812 345 6789" />
+
+          <button class="btn-primary mt-8">Recharge</button>
         </form>
       </div>
     </div>
-
-    <div class="fixed-bottom">
-      <button class="btn-primary">Recharge</button>
-    </div>
-
     <!-- <script src="../js/script.js"></script> -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
