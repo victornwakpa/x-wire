@@ -7,6 +7,6 @@
     @apply w-full capitalize bg-secondary px-4 py-3 text-base rounded-md text-white font-semibold;
   }
   .input-primary {
-    @apply rounded-md w-full h-12 p-3 border border-lighter mt-2 mb-5;
+    @apply rounded-md w-full h-12 p-3 border border-gray-300 mt-2 mb-5 focus:ring-secondary focus:border-secondary;
   }
 }
