@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../output.css" />
+  </head>
+  <body class="bg-bgColor">
+    <div class="container px-5 relative">
+      <div class="w-full py-5 grid grid-cols-3">
+        <i data-lucide="chevron-left" class=""></i>
+        <h1 class="font-semibold text-center">Airtime</h1>
+      </div>
+      <div class="flex flex-col w-full gap-4 items-center mt-3">
+        <div
+          class="divide-x-4 font-semibold text-base border-2 rounded-md overflow-hidden flex w-fit"
+        >
+          <button class="px-5 bg-orange-100 py-2 uppercase">Buy</button>
+          <button class="px-5 py-2 uppercase">Sell</button>
+        </div>
+
+        <form action="" class="mt-2">
+          <label for="network" class="text-sm text-gray-10">Network</label>
+          <div class="relative inline-block w-full">
+            <select
+              id="network"
+              class="bg-white border border-gray-300 text-gray-10 mb-5 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-3 appearance-none"
+            >
+              <option selected>Choose a Network</option>
+              <option value="">MTN</option>
+              <option value="">GLO</option>
+              <option value="">AIRTEL</option>
+              <option value="">9MOBILE</option>
+            </select>
+            <div
+              class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-gray-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </div>
+          </div>
+
+          <label for="phone" class="text-sm text-gray-10">Phone Number</label>
+          <input
+            type="text"
+            id="phoneno"
+            class="input-primary mt-0 mb-0"
+            placeholder="0812 345 6789"
+          />
+        </form>
+
+        <div class="mt-2 w-full mb-4">
+          <div class="flex items-center gap-2">
+            <p class="text-sm">Filter:</p>
+            <div class="flex gap-2">
+              <span
+                class="px-2 text-[10px] flex justify-center items-center rounded-full bg-white border"
+                >SME</span
+              >
+              <span
+                class="px-2 text-[10px] flex justify-center items-center rounded-full bg-white border"
+                >Direct</span
+              >
+              <span
+                class="px-2 text-[10px] flex justify-center items-center rounded-full bg-white border"
+                >Daily</span
+              >
+            </div>
+          </div>
+
+          <div class="bg-white p-3 grid grid-cols-3 rounded-lg overflow-hidden gap-3 w-full mt-2" id="dataList">
+            <!-- THE DATA PRICE LOOPED WITHIN THE JAVASCRIPT BELOW
+              WILL BE PLACED HERE -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="../js/script.js"></script> -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+
+      const services = [
+        { id: "1", price: "500", quantity: "2GB", duaration: "30 Days" },
+        { id: "2", price: "500", quantity: "2GB", duaration: "30 Days" },
+        { id: "3", price: "500", quantity: "2GB", duaration: "30 Days" },
+        { id: "4", price: "500", quantity: "2GB", duaration: "30 Days" },
+        { id: "5", price: "500", quantity: "2GB", duaration: "30 Days" },
+        { id: "6", price: "500", quantity: "2GB", duaration: "30 Days" },
+        { id: "7", price: "500", quantity: "2GB", duaration: "30 Days" },
+        { id: "8", price: "500", quantity: "2GB", duaration: "30 Days" },
+        { id: "9", price: "500", quantity: "2GB", duaration: "30 Days" },
+        { id: "10", price: "500", quantity: "2GB", duaration: "30 Days" },
+        { id: "11", price: "500", quantity: "2GB", duaration: "30 Days" },
+        { id: "11", price: "500", quantity: "2GB", duaration: "30 Days" },
+      ];
+
+      const servicesList = document.getElementById("dataList");
+
+      servicesList.innerHTML = services
+        .map(
+          (data) => `
+          <div
+              class="bg-[#F8F8FA] text-sm w-full rounded-lg flex gap-2 flex-col items-center overflow-hidden py-3 text-gray-10"
+            >
+              <span>${data.quantity}</span>
+              <span class="font-bold">&#8358;${data.price}</span>
+              <span class="bg-secondary text-white font-medium w-full text-center py-1 text-[12px]">${data.duaration}</span>
+            </div>
+      `
+        )
+        .join("");
+    </script>
+  </body>
+</html>
