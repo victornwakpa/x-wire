@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -15,20 +15,19 @@
     <!-- CSS STYLING -->
     <link href="./output.css" rel="stylesheet" />
   </head>
-  <body>
-    <div class="container relative grid h-lvh place-content-center px-5 md:hidden">
+  <body class="overflow-x-hidden">
+    <div
+      class="container relative flex flex-col items-center px-5 overflow-x-hidden justify-center h-screen"
+    >
       <div class="grid place-items-center">
-        <img
-          class=""
-          src="./assets/logo-light.png"
-          alt="website logo"
-        />
+        <img class="" src="./assets/logo-light.png" alt="website logo" />
       </div>
       <div class="my-14">
         <h1
           class="text-center font-nerko text-5xl font-bold tracking-wide text-title-color"
         >
-          Your <span class="font-oleo text-secondary">favourite</span><br /> bill app
+          Your <span class="font-oleo text-secondary">favourite</span><br />
+          bill app
         </h1>
         <p class="mt-3 text-center text-light">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -44,13 +43,20 @@
           create account
         </button>
       </div>
-      
 
-      <!-- <div class="w-28 h-28 bg-primary absolute -top-5 -left-5 rounded-full -z-40 blur-3xl"></div>
-      <div class="w-36 h-36 bg-blue-800 absolute top-[50%] -left-[10%] rounded-full -z-40 blur-[114px]"></div>
-      <div class="w-28 h-28 bg-primary absolute -bottom-5 -right-[10%] rounded-full -z-40 blur-3xl"></div>
-      <div class="w-28 h-28 bg-blue-800 absolute bottom-20 -right-[10%] rounded-full -z-40 blur-[114px]"></div> -->
-      </div>
+      <!-- BACKGROUND GRADIENT -->
+      <div
+        class="w-28 h-28 bg-primary absolute -top-5 -left-5 rounded-full -z-40 blur-3xl"
+      ></div>
+      <div
+        class="w-36 h-36 bg-blue-800 absolute top-[50%] -left-[10%] rounded-full -z-40 blur-[114px]"
+      ></div>
+      <div
+        class="w-28 h-28 bg-primary absolute -bottom-5 -right-[10%] rounded-full -z-40 blur-3xl"
+      ></div>
+      <div
+        class="w-28 h-28 bg-blue-800 absolute bottom-20 -right-[10%] rounded-full -z-40 blur-[114px]"
+      ></div>
     </div>
   </body>
 </html>

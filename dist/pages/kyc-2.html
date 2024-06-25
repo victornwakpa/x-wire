@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../output.css" />
+  </head>
+  <body class="bg-bgColor">
+    <div class="container px-5 relative">
+      <div class="w-full py-5 grid grid-cols-3">
+        <i data-lucide="chevron-left" class=""></i>
+        <h1 class="font-semibold text-center">Step 2 of 2</h1>
+      </div>
+
+      <div class="text-gray-10">
+        <h2 class="text-xl font-semibold">KYC</h2>
+        <p class="text-sm">please provide your information</p>
+        <form action="" class="mt-6">
+          <div class="bg-white rounded-md p-4">
+            <label for="network" class="text-sm text-gray-10"
+              >Select Network</label
+            >
+            <select
+              id="network"
+              class="bg-white border border-gray-300 text-gray-10 mb-5 text-sm rounded-md focus:ring-secondary focus:border-secondary block w-full p-3"
+            >
+              <option selected>Select ID</option>
+              <option value="">BVN</option>
+              <option value="">DRIVER LICENSE NUMBER</option>
+              <option value="">VOTER ID NUMBER</option>
+              <option value="">NEPA</option>
+            </select>
+          </div>
+
+          <button class="btn-primary mt-8">Next</button>
+        </form>
+      </div>
+    </div>
+    <!-- <script src="../js/script.js"></script> -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

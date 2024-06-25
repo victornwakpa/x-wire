@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../output.css" />
+  </head>
+  <body class="bg-bgColor">
+    <div class="container px-5 relative">
+      <div class="w-full py-5 grid grid-cols-3">
+        <i data-lucide="chevron-left" class=""></i>
+      </div>
+
+      <div class="text-gray-10 text-center">
+        <img src="../assets/amazon.png" alt="" class="inline-block" />
+        <h1 class="font-semibold text-center">Amazon US</h1>
+
+        <div
+          class="border border-gray-700 bg-white rounded-lg mt-5 divide-y divide-gray-700 px-4"
+        >
+          <div class="flex justify-between py-3">
+            <p class="flex flex-col items-start">
+              <span class="text-gray-500 text-sm">Amount (USD)</span>
+              <span class="font-medium">50</span>
+            </p>
+            <p class="flex flex-col items-end">
+              <span class="text-gray-500 text-sm">Quantity</span>
+              <span class="font-medium">1</span>
+            </p>
+          </div>
+          <div class="flex justify-between py-3">
+            <p class="flex flex-col items-start">
+              <span class="text-gray-500 text-sm">Total Amount (NGN)</span>
+              <span class="font-medium">81,600</span>
+            </p>
+            <p class="flex flex-col items-end">
+              <span class="text-gray-500 text-sm">Total Amount (USD)</span>
+              <span class="font-medium">51</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-5 text-left bg-white rounded-md p-3">
+          <h3 class="font-semibold mb-1">Procedure</h3>
+          <p class="text-light text-sm">
+            You will select your payment method on the next screen. The gift
+            code will be delivered to you immediately after the transaction is
+            completed. Kindly endeavour to read the terms below.
+          </p>
+        </div>
+        <div class="mt-4 text-left text-[12px]">
+            <input type="checkbox" name="terms" id="terms" />
+            <label for="terms"
+              >I understood the
+              <span class="text-secondary">Terms & Conditions.</span></label
+            >
+          </div>
+      </div>
+      <button class="btn-primary mt-8">Procees</button>
+    </div>
+    <!-- <script src="../js/script.js"></script> -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

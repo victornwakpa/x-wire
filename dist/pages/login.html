@@ -6,11 +6,11 @@
     <title>Login</title>
     <link rel="stylesheet" href="../output.css" />
   </head>
-  <body>
+  <body class="overflow-x-auto">
     <div
-      class="container relative flex flex-col items-center justify-center h-lvh py-6 px-5 md:hidden"
+      class="container relative flex flex-col overflow-x-hidden items-center justify-center h-screen py-6 px-5"
     >
-      <div class="grid place-items-center w-36">
+      <div class="grid place-items-center w-36 mt-4">
         <img
           class=""
           src="../assets/logo-light.png"
@@ -52,6 +52,19 @@
         <span class="font-bold text-secondary">Sign Up</span>
       </p>
       
+      <!-- BACKGROUND GRADIENT -->
+      <div
+        class="w-28 h-28 bg-primary absolute -top-5 -left-5 rounded-full -z-40 blur-3xl"
+      ></div>
+      <div
+        class="w-36 h-36 bg-blue-800 absolute top-[50%] -left-[10%] rounded-full -z-40 blur-[114px]"
+      ></div>
+      <div
+        class="w-28 h-28 bg-primary absolute -bottom-5 -right-[10%] rounded-full -z-40 blur-3xl"
+      ></div>
+      <div
+        class="w-28 h-28 bg-blue-800 absolute bottom-20 -right-[10%] rounded-full -z-40 blur-[114px]"
+      ></div>
     </div>
   </body>
 </html>
