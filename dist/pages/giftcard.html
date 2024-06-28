@@ -7,44 +7,133 @@
     <link rel="stylesheet" href="../output.css" />
   </head>
   <body class="bg-bgColor">
-    <div class="container px-5 relative">
-      <div class="w-full py-5 grid grid-cols-3">
-        <i data-lucide="chevron-left" class=""></i>
-        <h1 class="font-semibold text-center">Buy Gift Card</h1>
-      </div>
-
-      <div class="text-gray-10">
-        <div class="flex justify-between items-center">
-          <h2 class="text-xl font-semibold">Gift Card</h2>
-          <select
-            id="network"
-            class="bg-white border w-fit border-gray-300 text-gray-10 mb-5 text-sm rounded-md focus:ring-secondary focus:border-secondary block p-3"
-          >
-            <option selected>USD</option>
-            <option value="">GBP</option>
-            <option value="">EUR</option>
-            <option value="">CAD</option>
-            <option value="">CHF</option>
-          </select>
-        </div>
-        <div
-          class="rounded-md border-lighter bg-white flex justify-center border"
+    <div class="flex">
+      <!--  ============= SIDEBART START ============== -->
+      <div class="z-[100]">
+        <span
+          class="absolute z-50 text-white text-4xl top-5 left-4 cursor-pointer"
+          onclick="Openbar()"
         >
-          <input
-            type="text"
-            class="border-none input-primary outline-none m-0"
-          />
-          <div class="w-[20%] grid place-content-center">
-            <i data-lucide="search" class="w-6 h-6"></i>
+          <i class="bi bi-filter-left px-2 bg-gray-900 rounded-md"></i>
+        </span>
+        <div
+          class="sidebar z-50 fixed lg:relative top-0 bottom-0 lg:left-0 left-[-300px] duration-1000 p-2 w-[300px] lg:w-[280px] overflow-y-auto text-center bg-primary-20 shadow h-screen"
+        >
+          <div class="text-gray-100 text-xl">
+            <div class="p-2.5 mt-1 flex items-center rounded-md">
+              <a href="../index.html">
+                <div class="flex justify-center items-center w-36">
+                  <img
+                    class=""
+                    src="../assets/logo-light.png"
+                    alt="website logo"
+                    class=""
+                  />
+                </div>
+              </a>
+              <i
+                class="bi bi-x ml-20 text-black w-8 h-8 cursor-pointer lg:hidden"
+                onclick="Openbar()"
+              ></i>
+            </div>
+            <!-- <hr class="my-2 text-gray-600" /> -->
+
+            <div>
+              <div
+                class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-primary text-gray-10 hover:text-white"
+              >
+                <i class="bi bi-house-door-fill"></i>
+                <span class="text-base ml-4 font-medium">Home</span>
+              </div>
+              <div
+                class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-primary text-gray-10 hover:text-white"
+              >
+                <i class="bi bi-wallet-fill"></i>
+                <span class="text-base ml-4 font-medium">Wallet</span>
+              </div>
+              <div
+                class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-primary text-gray-10 hover:text-white"
+              >
+                <i class="bi bi-diagram-2-fill"></i>
+                <span class="text-base ml-4 font-medium">Transactions</span>
+              </div>
+              <div
+                class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-primary text-gray-10 hover:text-white"
+              >
+                <i class="bi bi-gear-fill"></i>
+                <span class="text-base ml-4 font-medium">Settings</span>
+              </div>
+
+              <div
+                class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-primary text-gray-10 hover:text-white"
+              >
+                <i class="bi bi-chat-left-dots-fill"></i>
+                <span class="text-base ml-4 font-medium">Help & Support</span>
+              </div>
+
+              <div
+                class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-primary hover:text-white text-gray-10"
+              >
+                <i class="bi bi-box-arrow-in-right"></i>
+                <span class="text-[15px] ml-4 font-medium">Logout</span>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+      <!-- ========== SIDEBAR END ============= -->
 
-        <div class="my-5 flex gap-4 flex-col" id="cardList">
-          <!-- THE GIFT CARDS LOOPED WITHIN THE JAVASCRIPT BELOW
+      <!-- ========== CONTENT START ============= -->
+      <div
+        class="container px-5 lg:px-10 lg:pb-20 lg:pt-6 relative grid w-full flex-1 h-screen overflow-y-auto"
+      >
+        <div class="lg:max-w-xl">
+          <div class="w-full py-5 grid lg:grid-cols-3 items-center">
+            <a
+              href="/dist/pages/dashboard.html"
+              class="p-3 rounded-md hover:bg-primary-20 w-fit"
+            >
+              <i data-lucide="chevron-left" class="hidden lg:block"></i>
+            </a>
+            <h1 class="font-semibold text-center">Buy Gift Card</h1>
+          </div>
+
+          <div class="text-gray-10">
+            <div class="flex justify-between items-center">
+              <h2 class="text-xl font-semibold">Gift Card</h2>
+              <select
+                id="network"
+                class="bg-white border w-fit border-gray-300 text-gray-10 mb-5 text-sm rounded-md focus:ring-secondary focus:border-secondary block p-3"
+              >
+                <option selected>USD</option>
+                <option value="">GBP</option>
+                <option value="">EUR</option>
+                <option value="">CAD</option>
+                <option value="">CHF</option>
+              </select>
+            </div>
+            <div
+              class="rounded-md border-lighter bg-white flex justify-center border"
+            >
+              <input
+                type="text"
+                class="border-none input-primary outline-none m-0"
+              />
+              <div class="w-[20%] grid place-content-center">
+                <i data-lucide="search" class="w-6 h-6"></i>
+              </div>
+            </div>
+
+            <div class="my-5 flex gap-4 flex-col" id="cardList">
+              <!-- THE GIFT CARDS LOOPED WITHIN THE JAVASCRIPT BELOW
               WILL BE PLACED HERE -->
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
+    <script src="../js/themeswitcher.js"></script>
     <!-- <script src="../js/script.js"></script> -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>

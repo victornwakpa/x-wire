@@ -9,4 +9,7 @@
   .input-primary {
     @apply rounded-md w-full h-12 p-3 border border-gray-300 mt-2 mb-5 focus:ring-secondary focus:border-secondary;
   }
+  .display-none {
+    @apply hidden;
+  }
 }

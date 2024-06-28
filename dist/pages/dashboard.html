@@ -5,79 +5,211 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
     <link rel="stylesheet" href="../output.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
   </head>
-  <body class="bg-bgColor">
-    <div class="container px-5 relative">
-      <div class="flex justify-between mt-4">
-        <div class="">
-          <div class="w-10 h-10 bg-gray-600 rounded-full"></div>
-          <p class="font-semibold">Sunshine!</p>
-          <p class="text-[12px] -mt-1 font-light">Happy new month</p>
-        </div>
-
-        <div class="">
-          <i data-lucide="bell" class="text-primary w-8 h-8"></i>
-        </div>
-      </div>
-
-      <div
-        class="bg-gradient-to-r from-primary to-secondary rounded-2xl shadow-2xl shadow-primary/30 px-8 py-4 flex flex-col gap-2 justify-center items-center text-white mt-4"
-      >
-        <p class="flex gap-3 items-center">
-          <span class="font-semibold">Available Balance</span>
-          <span><i data-lucide="eye-off" class="text-white w-5 h-5"></i></span>
-        </p>
-        <p class="font-bold text-2xl">&#8358; 2,030.00</p>
-
-        <div
-          class="rounded-full py-2 px-4 bg-secondary bg-opacity-75 flex gap-3 items-center"
+  <body class="bg-bgColor dark:bg-bgColord">
+    <div class="flex ">
+      <!--  ============= SIDEBART START ============== -->
+      <div class="z-[100]">
+        <span
+          class="absolute z-50 text-white text-4xl top-5 left-4 cursor-pointer"
+          onclick="Openbar()"
         >
-          <i data-lucide="circle-plus" class="text-white w-5 h-5"></i>
-          <p class="font-bold text-sm">Add Money</p>
-        </div>
-      </div>
+          <i class="bi bi-filter-left px-2 bg-gray-900 dark:bg-primary rounded-md"></i>
+        </span>
+        <div
+          class="sidebar z-50 fixed lg:relative top-0 bottom-0 lg:left-0 left-[-300px] p-2 w-[300px] lg:w-[280px] overflow-y-auto text-center bg-primary-20 dark:bg-primary-d20 shadow h-screen"
+        >
+          <div class="text-gray-100 text-xl">
+            <div class="p-2.5 mt-1 flex items-center rounded-md">
+              <a href="../index.html">
+                <div class="flex justify-center items-center w-36">
+                  <img
+                    class=""
+                    src="../assets/logo-light.png"
+                    alt="website logo"
+                    class=""
+                  />
+                </div>
+              </a>
+              <i
+                class="bi bi-x ml-20 text-black w-8 h-8 cursor-pointer lg:hidden"
+                onclick="Openbar()"
+              ></i>
+            </div>
+            <!-- <hr class="my-2 text-gray-600" /> -->
 
-      <div
-        class="mt-5 rounded-xl p-4 bg-white flex items-center gap-3 justify-between shadow-md"
-      >
-        <div>
-          <div
-            class="border-8 border-primary overflow-hidden rounded-full w-16 h-16 grid place-items-center"
-          >
-            <p class="font-extrabold text-xl">5/5</p>
+            <div>
+              <div
+                class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-primary text-gray-10 dark:text-white hover:text-white"
+              >
+                <i class="bi bi-house-door-fill"></i>
+                <span class="text-base ml-4 font-medium">Home</span>
+              </div>
+              <div
+                class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-primary text-gray-10 dark:text-white hover:text-white"
+              >
+                <i class="bi bi-wallet-fill"></i>
+                <span class="text-base ml-4 font-medium">Wallet</span>
+              </div>
+              <div
+                class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-primary text-gray-10 dark:text-white hover:text-white"
+              >
+                <i class="bi bi-diagram-2-fill"></i>
+                <span class="text-base ml-4 font-medium">Transactions</span>
+              </div>
+              <div
+                class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-primary text-gray-10 dark:text-white hover:text-white"
+              >
+                <i class="bi bi-gear-fill"></i>
+                <span class="text-base ml-4 font-medium">Settings</span>
+              </div>
+
+              <div
+                class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-primary text-gray-10 dark:text-white hover:text-white"
+              >
+                <i class="bi bi-chat-left-dots-fill"></i>
+                <span class="text-base ml-4 font-medium">Help & Support</span>
+              </div>
+
+              <div
+                class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-primary hover:text-white text-gray-10 dark:text-white"
+              >
+                <i class="bi bi-box-arrow-in-right"></i>
+                <span class="text-[15px] ml-4 font-medium">Logout</span>
+              </div>
+
+              <!-- DARK MODE START -->
+              <div
+                class="p-2.5 mt-3 flex items-center justify-center rounded-md px-4 w-fit cursor-pointer text-gray-10 dark:text-white"
+              >
+                <p class="text-base mr-2 font-medium theme-text">Light Mode</p>
+                <div class="">
+                  <i class="bi bi-brightness-high-fill w-4 h-4 sun"></i>
+                  <i class="bi bi-moon-fill w-4 h-4 moon"></i>
+                </div>
+              </div>
+              <!-- DARK MODE START -->
+            </div>
           </div>
         </div>
-        <div>
-          <p class="font-bold">Complete your Profile</p>
-          <p class="text-[12px]">
-            Get a seamless experience by completing your profile
-          </p>
-        </div>
       </div>
+      <!-- ========== SIDEBAR END ============= -->
 
-      <div class="mt-5">
-        <h2 class="text-base font-bold">Quick Actions</h2>
-        <div class="p-5 mt-2 shadow-md rounded-md bg-white">
+      <div class="container mt-16 lg:mt-2 flex-1 px-5">
+        <div class="flex justify-between mt-4">
+          <div class="text-gray-10 dark:text-white">
+            <p class="font-semibold lg:font-bold text-base lg:text-3xl">
+              Sunshine!
+            </p>
+            <p
+              class="text-[12px] lg:leading-10 lg:text-xl -mt-1 font-light lg:font-normal"
+            >
+              Happy new month
+            </p>
+          </div>
+
+          <div class="">
+            <i data-lucide="bell" class="text-primary w-8 h-8"></i>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-4 lg:gap-6 lg:mt-2">
           <div
-            class="grid grid-cols-3 gap-4 mt-2 py-4 justify-items-stretch"
-            id="servicesList"
+            class="bg-primary lg:bg-opacity-90 rounded-2xl shadow-2xl shadow-primary/30 lg:shadow-none px-8 py-4 flex flex-col gap-2 justify-center items-center lg:min-w-96 max-w-sm text-white mt-4"
           >
-            <!-- THE SERVICES LOOPED WITHIN THE JAVASCRIPT BELOW
+            <p class="flex gap-3 items-center">
+              <span class="font-semibold">Available Balance</span>
+              <span
+                ><i data-lucide="eye-off" class="text-white w-5 h-5"></i
+              ></span>
+            </p>
+            <p class="font-bold text-2xl">&#8358; 2,030.00</p>
+
+            <div
+              class="rounded-full py-2 px-4 bg-white flex gap-3 items-center"
+            >
+              <i data-lucide="circle-plus" class="text-gray-10 w-5 h-5"></i>
+              <p class="font-bold text-sm text-gray-10">Add Money</p>
+            </div>
+          </div>
+
+          <div
+            class="mt-5 rounded-xl max-w-sm p-4 bg-white dark:bg-red-200 flex items-center gap-3 justify-between shadow-md"
+          >
+            <div>
+              <div
+                class="border-8 border-primary overflow-hidden rounded-full w-16 h-16 grid place-items-center"
+              >
+                <p class="font-extrabold text-xl">5/5</p>
+              </div>
+            </div>
+            <div>
+              <p class="font-bold text-base lg:text-xl">
+                Complete your Profile
+              </p>
+              <p class="text-[12px] lg:text-base">
+                Get a seamless experience by completing your profile
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5">
+          <h2 class="text-base lg:text-2xl font-bold">Quick Actions</h2>
+          <div
+            class="shadow-md lg:shadow-none rounded-md bg-white dark:bg-primary-d20 dark:lg:bg-transparent lg:bg-transparent"
+          >
+            <div
+              class="grid grid-cols-3 lg:grid-cols-4 lg:gap-y-6 gap-4 py-4 justify-items-stretch"
+              id="servicesList"
+            >
+              <!-- THE SERVICES LOOPED WITHIN THE JAVASCRIPT BELOW
               WILL BE PLACED HERE -->
+            </div>
           </div>
         </div>
       </div>
     </div>
 
+    <script src="../js/themeswitcher.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
       const services = [
-        { icon: "smartphone-charging", text: "Buy/Sell Airtime" },
-        { icon: "wifi", text: "Buy/Sell Data" },
-        { icon: "hand-helping", text: "Loan" },
-        { icon: "credit-card", text: "Virtual Card" },
-        { icon: "gift", text: "Buy Gift Card" },
-        { icon: "list-collapse", text: "More" },
+        {
+          icon: "smartphone-charging",
+          text: "Buy/Sell Airtime",
+          link: "/dist/pages/airtime.html",
+        },
+        { icon: "wifi", text: "Buy/Sell Data", link: "/dist/pages/data.html" },
+        { icon: "hand-helping", text: "Loan", link: "/dist/pages/loan.html" },
+        {
+          icon: "credit-card",
+          text: "Virtual Card",
+          link: "/dist/pages/virtualcard.html",
+        },
+        {
+          icon: "gift",
+          text: "Buy Gift Card",
+          link: "/dist/pages/giftcard.html",
+        },
+        {
+          icon: "circle-user-round",
+          text: "Virtual Card",
+          link: "/dist/pages/virtualcard.html",
+        },
+        { icon: "tv", text: "TV", link: "/dist/pages/tv.html" },
+        {
+          icon: "lightbulb",
+          text: "Electricity",
+          link: "/dist/pages/electricity.html",
+        },
       ];
 
       const servicesList = document.getElementById("servicesList");
@@ -85,17 +217,18 @@
       servicesList.innerHTML = services
         .map(
           (service) => `
-        <div class="grid place-items-center">
-          <div class="p-3 rounded bg-red-50 w-fit">
+        <a href="${service.link}" class="grid place-items-center lg:gap-3 lg:place-items-start lg:rounded-lg lg:p-6 lg:w-max-64 lg:h-32 lg:bg-primary-20 lg:dark:bg-primary-d20">
+          <div class="p-3 rounded bg-red-50 w-fit lg:rounded-full lg:bg-white">
             <i data-lucide="${service.icon}" class="w-6 h-6 text-primary"></i>
           </div>
-          <p class="text-[8px] font-semibold text-center mt-1">${service.text}</p>
-        </div>
+          <p class="text-[8px] md:text-sm lg:text-xl dark:text-white font-semibold text-center mt-1">${service.text}</p>
+        </a>
       `
         )
         .join("");
 
       lucide.createIcons();
     </script>
+    <script src="../js/script.js"></script>
   </body>
 </html>
