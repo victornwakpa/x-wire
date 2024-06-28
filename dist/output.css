@@ -693,6 +693,10 @@ video {
   top: 0px;
 }
 
+.top-20 {
+  top: 5rem;
+}
+
 .top-5 {
   top: 1.25rem;
 }
@@ -701,8 +705,16 @@ video {
   top: 50%;
 }
 
+.top-10 {
+  top: 2.5rem;
+}
+
 .-z-40 {
   z-index: -40;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 .z-50 {
@@ -734,6 +746,10 @@ video {
 
 .-mt-1 {
   margin-top: -0.25rem;
+}
+
+.-mt-10 {
+  margin-top: -2.5rem;
 }
 
 .mb-0 {
@@ -808,6 +824,22 @@ video {
   margin-top: 2rem;
 }
 
+.mt-20 {
+  margin-top: 5rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .block {
   display: block;
 }
@@ -836,6 +868,10 @@ video {
   height: 4rem;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
 .h-28 {
   height: 7rem;
 }
@@ -862,6 +898,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-24 {
+  height: 6rem;
 }
 
 .w-12 {
@@ -1057,6 +1097,10 @@ video {
   border-radius: 1rem;
 }
 
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -1169,6 +1213,11 @@ video {
   background-color: rgb(251 128 48 / var(--tw-bg-opacity));
 }
 
+.bg-slate-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1252,6 +1301,18 @@ video {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
+}
+
+.pb-10 {
+  padding-bottom: 2.5rem;
 }
 
 .text-left {
@@ -1522,6 +1583,10 @@ video {
     margin-top: 0.5rem;
   }
 
+  .lg\:mb-0 {
+    margin-bottom: 0px;
+  }
+
   .lg\:block {
     display: block;
   }
@@ -1617,6 +1682,10 @@ video {
     padding-top: 1.5rem;
   }
 
+  .lg\:pb-0 {
+    padding-bottom: 0px;
+  }
+
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -1687,16 +1756,12 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .dark\:lg\:bg-transparent:where(.dark, .dark *) {
+    background-color: transparent;
+  }
+
   .lg\:dark\:bg-primary-d20:where(.dark, .dark *) {
     --tw-bg-opacity: 1;
     background-color: rgb(129 47 47 / var(--tw-bg-opacity));
-  }
-
-  .lg\:dark\:bg-transparent:where(.dark, .dark *) {
-    background-color: transparent;
-  }
-
-  .dark\:lg\:bg-transparent:where(.dark, .dark *) {
-    background-color: transparent;
   }
 }

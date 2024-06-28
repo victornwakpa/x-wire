@@ -15,14 +15,16 @@
     />
   </head>
   <body class="bg-bgColor dark:bg-bgColord">
-    <div class="flex ">
+    <div class="flex">
       <!--  ============= SIDEBART START ============== -->
       <div class="z-[100]">
         <span
           class="absolute z-50 text-white text-4xl top-5 left-4 cursor-pointer"
           onclick="Openbar()"
         >
-          <i class="bi bi-filter-left px-2 bg-gray-900 dark:bg-primary rounded-md"></i>
+          <i
+            class="bi bi-filter-left px-2 bg-gray-900 dark:bg-primary rounded-md"
+          ></i>
         </span>
         <div
           class="sidebar z-50 fixed lg:relative top-0 bottom-0 lg:left-0 left-[-300px] p-2 w-[300px] lg:w-[280px] overflow-y-auto text-center bg-primary-20 dark:bg-primary-d20 shadow h-screen"
@@ -103,8 +105,8 @@
       </div>
       <!-- ========== SIDEBAR END ============= -->
 
-      <div class="container mt-16 lg:mt-2 flex-1 px-5">
-        <div class="flex justify-between mt-4">
+      <div class="container mt-16 lg:mt-2 flex-1 pb-8 lg:pb-0">
+        <div class="flex justify-between mt-4 px-5">
           <div class="text-gray-10 dark:text-white">
             <p class="font-semibold lg:font-bold text-base lg:text-3xl">
               Sunshine!
@@ -120,7 +122,7 @@
             <i data-lucide="bell" class="text-primary w-8 h-8"></i>
           </div>
         </div>
-        <div class="flex flex-col lg:flex-row gap-4 lg:gap-6 lg:mt-2">
+        <div class="flex flex-col lg:flex-row gap-4 lg:gap-6 lg:mt-2 px-5">
           <div
             class="bg-primary lg:bg-opacity-90 rounded-2xl shadow-2xl shadow-primary/30 lg:shadow-none px-8 py-4 flex flex-col gap-2 justify-center items-center lg:min-w-96 max-w-sm text-white mt-4"
           >
@@ -161,8 +163,10 @@
           </div>
         </div>
 
-        <div class="my-5">
-          <h2 class="text-base lg:text-2xl dark:text-white font-bold">Quick Actions</h2>
+        <div class="my-5 px-5">
+          <h2 class="text-base lg:text-2xl dark:text-white font-bold">
+            Quick Actions
+          </h2>
           <div
             class="shadow-md lg:shadow-none rounded-md bg-white dark:bg-primary-d20 dark:lg:bg-transparent lg:bg-transparent"
           >
@@ -173,6 +177,23 @@
               <!-- THE SERVICES LOOPED WITHIN THE JAVASCRIPT BELOW
               WILL BE PLACED HERE -->
             </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col relative pb-10">
+          <div
+            class="bg-primary p-3 text-white rounded-3xl justify-center flex gap-2 h-24 relative"
+          >
+            <i class="bi bi-tag w-5 h-5"></i>
+            <p>Invite friends and get NGN 1,000 reward ➞</p>
+          </div>
+
+          <div class="bg-white rounded-3xl px-5 pt-5 absolute mt-12 w-full">
+            <h3 class="text-gray-10 font-semibold">RECENT TRANSACTIONS</h3>
+            <div class="grid gap-3 mt-2" id="transactionsList">
+              <!-- TRANSACTION ITEMS HERE -->
+            </div>
+            <p class="py-5 px-5 bg-white text-primary text-base text-center uppercase font-bold">transaction history</p>
           </div>
         </div>
       </div>
@@ -212,7 +233,35 @@
         },
       ];
 
+      const transactions = [
+        {
+          id: 1,
+          network: "Startimes",
+          date: "01 Jan",
+          paymentType: "Subscription payment",
+        },
+        {
+          id: 2,
+          network: "09035862314",
+          date: "01 Jan",
+          paymentType: "MTN: 2GB|SME|30days",
+        },
+        {
+          id: 3,
+          network: "DSTV",
+          date: "01 Jan",
+          paymentType: "Subscription payment",
+        },
+        {
+          id: 4,
+          network: "EEDC",
+          date: "01 Jan",
+          paymentType: "Subscription payment",
+        },
+      ];
+
       const servicesList = document.getElementById("servicesList");
+      const transactionsList = document.getElementById("transactionsList");
 
       servicesList.innerHTML = services
         .map(
@@ -223,6 +272,23 @@
           </div>
           <p class="text-[8px] md:text-sm lg:text-xl dark:text-white font-semibold text-center mt-1">${service.text}</p>
         </a>
+      `
+        )
+        .join("");
+
+      transactionsList.innerHTML = transactions
+        .map(
+          (transaction) => `
+            <div class="flex items-center justify-between gap-2">
+              <div class="w-12 h-12 rounded-full bg-slate-600"></div>
+              <div class="">
+                <span class="block font-medium">${transaction.network}</span>
+                <p class="block text-gray-500">
+                  <span>${transaction.date}</span> <span>${transaction.paymentType}</span>
+                </p>
+              </div>
+              <p class="text-primary">-1200</p>
+            </div>
       `
         )
         .join("");
