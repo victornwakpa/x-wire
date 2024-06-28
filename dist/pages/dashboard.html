@@ -279,13 +279,15 @@
       transactionsList.innerHTML = transactions
         .map(
           (transaction) => `
-            <div class="flex items-center justify-between gap-2">
-              <div class="w-12 h-12 rounded-full bg-slate-600"></div>
-              <div class="">
-                <span class="block font-medium">${transaction.network}</span>
-                <p class="block text-gray-500">
-                  <span>${transaction.date}</span> <span>${transaction.paymentType}</span>
-                </p>
+            <div class="flex items-center justify-between">
+              <div class="flex gap-3">
+                <div class="w-12 h-12 rounded-full bg-slate-600"></div>
+                <div class="">
+                  <span class="block font-medium">${transaction.network}</span>
+                  <p class="block text-gray-500 text-sm">
+                    <span>${transaction.date}</span> <span>${transaction.paymentType}</span>
+                  </p>
+                </div>
               </div>
               <p class="text-primary">-1200</p>
             </div>
