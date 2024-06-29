@@ -709,6 +709,10 @@ video {
   z-index: 50;
 }
 
+.z-\[-2\] {
+  z-index: -2;
+}
+
 .z-\[100\] {
   z-index: 100;
 }
@@ -868,6 +872,10 @@ video {
   height: 2rem;
 }
 
+.h-dvh {
+  height: 100dvh;
+}
+
 .h-screen {
   height: 100vh;
 }
@@ -925,6 +933,14 @@ video {
   width: 100%;
 }
 
+.w-screen {
+  width: 100vw;
+}
+
+.max-w-3xl {
+  max-width: 48rem;
+}
+
 .max-w-sm {
   max-width: 24rem;
 }
@@ -935,6 +951,15 @@ video {
 
 .rotate-0 {
   --tw-rotate: 0deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-180 {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1189,6 +1214,10 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[radial-gradient\(60\%_120\%_at_50\%_50\%\2c hsla\(0\2c 0\%\2c 100\%\2c 0\)_0\2c rgba\(252\2c 205\2c 238\2c \.5\)_100\%\)\] {
+  background-image: radial-gradient(60% 120% at 50% 50%,hsla(0,0%,100%,0) 0,rgba(252,205,238,.5) 100%);
 }
 
 .p-2 {
@@ -1547,6 +1576,11 @@ video {
     left: 0px;
   }
 
+  .lg\:my-8 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
   .lg\:mt-0 {
     margin-top: 0px;
   }
@@ -1607,6 +1641,10 @@ video {
     row-gap: 1.5rem;
   }
 
+  .lg\:overflow-visible {
+    overflow: visible;
+  }
+
   .lg\:rounded-full {
     border-radius: 9999px;
   }
@@ -1664,6 +1702,11 @@ video {
     line-height: 2.25rem;
   }
 
+  .lg\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
   .lg\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -1680,6 +1723,10 @@ video {
 
   .lg\:font-normal {
     font-weight: 400;
+  }
+
+  .lg\:font-semibold {
+    font-weight: 600;
   }
 
   .lg\:leading-10 {
