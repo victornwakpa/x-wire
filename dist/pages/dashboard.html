@@ -14,7 +14,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
     />
   </head>
-  <body class="bg-bgColor dark:bg-bgColord scrollable-content">
+  <body class="bg-bgColor dark:bg-bgColord">
     <div class="lg:flex relative">
       <!--  ============= SIDEBART START ============== -->
       <div class="z-[100]">
@@ -27,7 +27,7 @@
           ></i>
         </span>
         <div
-          class="sidebar z-50 fixed lg:relative top-0 bottom-0 lg:left-0 right-[-300px] p-2 w-[300px] lg:w-[280px] overflow-y-auto text-center bg-primary-20 dark:bg-primary-d20 shadow h-screen"
+          class="sidebar z-50 fixed lg:relative top-0 bottom-0 lg:left-0 right-[-300px] p-2 w-[300px] lg:w-[280px] overflow-y-auto text-center bg-primary-20 dark:bg-primary-d20 shadow h-full"
         >
           <div class="text-gray-100 text-xl">
             <div class="p-2.5 mt-1 flex items-center rounded-md">
@@ -105,7 +105,7 @@
       </div>
       <!-- ========== SIDEBAR END ============= -->
 
-      <div class="container lg:mt-2 flex-1 pb-8 lg:pb-0 overflow-x-auto h-screen">
+      <div class="container lg:mt-2 flex-1 pb-8 lg:pb-0 h-screen">
         <div class="flex justify-between mt-4 px-5">
           <div class="text-gray-10 dark:text-white">
             <div class="w-10 h-10 rounded-full overflow-hidden">
@@ -279,7 +279,7 @@
           <div class="p-3 rounded bg-red-50 w-fit lg:rounded-full lg:bg-white">
             <i data-lucide="${service.icon}" class="w-6 h-6 text-primary"></i>
           </div>
-          <p class="text-[8px] md:text-sm lg:text-xl dark:text-white font-semibold text-center mt-1">${service.text}</p>
+          <p class="text-[8px] md:text-sm lg:text-base dark:text-white font-semibold text-center mt-1">${service.text}</p>
         </a>
       `
         )
