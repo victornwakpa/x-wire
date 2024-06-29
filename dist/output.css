@@ -1195,6 +1195,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-gray-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
 .bg-\[radial-gradient\(60\%_120\%_at_50\%_50\%\2c hsla\(0\2c 0\%\2c 100\%\2c 0\)_0\2c rgba\(252\2c 205\2c 238\2c \.5\)_100\%\)\] {
   background-image: radial-gradient(60% 120% at 50% 50%,hsla(0,0%,100%,0) 0,rgba(252,205,238,.5) 100%);
 }
@@ -1632,6 +1637,10 @@ video {
 
   .lg\:max-w-xl {
     max-width: 36rem;
+  }
+
+  .lg\:max-w-sm {
+    max-width: 24rem;
   }
 
   .lg\:grid-cols-3 {
