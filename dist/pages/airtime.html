@@ -97,7 +97,10 @@
       >
         <div class="lg:max-w-xl">
           <div class="w-full py-5 grid lg:grid-cols-3 items-center">
-            <a href="/pages/dashboard.html" class="p-3 rounded-md hover:bg-primary-20 w-fit">
+            <a
+              href="/pages/dashboard.html"
+              class="p-3 rounded-md hover:bg-primary-20 w-fit"
+            >
               <i data-lucide="chevron-left" class="hidden lg:block"></i>
             </a>
             <h1 class="font-semibold text-center">Airtime</h1>
@@ -106,72 +109,101 @@
             <div
               class="divide-x-4 font-semibold text-base border-2 rounded-md overflow-hidden flex w-fit"
             >
-              <button class="px-6 py-2 uppercase bg-gray-700 text-white">Buy</button>
-              <button class="px-6 py-2 uppercase">Sell</button>
+              <!-- BUY BUTTON -->
+              <button id="buyButton"  class="px-6 py-2 uppercase bg-gray-700 text-white">
+                Buy
+              </button>
+              <!-- SELL BUTTON -->
+              <button id="sellButton" class="px-6 py-2 uppercase">Sell</button>
             </div>
 
-            <div
-              class="grid grid-cols-3 gap-y-2 gap-x-6 w-full mt-2 py-4"
-              id="airtimeList"
-            >
-              <!-- THE AIRTIME PRICE LOOPED WITHIN THE JAVASCRIPT BELOW
+            <!-- BUY CONTENTS -->
+            <div id="buyContent" class="block">
+              <div
+                class="grid grid-cols-3 gap-y-2 gap-x-6 w-full mt-2 py-4"
+                id="airtimeList"
+              >
+                <!-- THE AIRTIME PRICE LOOPED WITHIN THE JAVASCRIPT BELOW
               WILL BE PLACED HERE -->
-            </div>
-
-            <form action="" class="mt-2">
-              <label for="email" class="text-sm text-gray-10">Amount</label>
-              <input type="text" id="email" class="input-primary" />
-
-              <label for="network" class="text-sm text-gray-10">Network</label>
-              <div class="relative inline-block w-full">
-                <select
-                  id="network"
-                  class="bg-white border border-gray-300 text-gray-10 mt-2 mb-5 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-3 appearance-none"
-                >
-                  <option selected>Choose a Network</option>
-                  <option value="">MTN</option>
-                  <option value="">GLO</option>
-                  <option value="">AIRTEL</option>
-                  <option value="">9MOBILE</option>
-                </select>
-                <div
-                  class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none"
-                >
-                  <svg
-                    class="w-4 h-4 text-gray-500"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    ></path>
-                  </svg>
-                </div>
               </div>
 
-              <label for="email" class="text-sm text-gray-10"
-                >Phone Number</label
-              >
-              <input
-                type="text"
-                id="email"
-                class="input-primary"
-                placeholder="0812 345 6789"
-              />
+              <form action="" class="mt-2">
+                <label for="email" class="text-sm text-gray-10">Amount</label>
+                <input type="text" id="email" class="input-primary" />
 
-              <button class="btn-primary mt-8">Recharge</button>
-            </form>
+                <label for="network" class="text-sm text-gray-10"
+                  >Network</label
+                >
+                <div class="relative inline-block w-full">
+                  <select
+                    id="network"
+                    class="bg-white border border-gray-300 text-gray-10 mt-2 mb-5 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-3 appearance-none"
+                  >
+                    <option selected>Choose a Network</option>
+                    <option value="">MTN</option>
+                    <option value="">GLO</option>
+                    <option value="">AIRTEL</option>
+                    <option value="">9MOBILE</option>
+                  </select>
+                  <div
+                    class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none"
+                  >
+                    <svg
+                      class="w-4 h-4 text-gray-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <label for="email" class="text-sm text-gray-10"
+                  >Phone Number</label
+                >
+                <input
+                  type="text"
+                  id="email"
+                  class="input-primary"
+                  placeholder="0812 345 6789"
+                />
+
+                <button class="btn-primary mt-8">Recharge</button>
+              </form>
+            </div>
+
+            <!-- SELL CONTENTS -->
+            <div id="sellContent" class="hidden">
+              <form action="" class="mt-2">
+                <label for="email" class="text-sm text-gray-10">Amount</label>
+                <input type="text" id="email" class="input-primary" />
+
+                <label for="email" class="text-sm text-gray-10"
+                  >Phone Number</label
+                >
+                <input
+                  type="text"
+                  id="email"
+                  class="input-primary"
+                  placeholder="0812 345 6789"
+                />
+
+                <button class="btn-primary mt-8">Sell</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
       <!-- ========== CONTENT END ============= -->
     </div>
-    
+
     <script src="../js/themeswitcher.js"></script>
     <script src="../js/script.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -198,6 +230,20 @@
       `
         )
         .join("");
+
+        document.getElementById('buyButton').addEventListener('click', function() {
+            document.getElementById('buyContent').classList.remove('hidden');
+            document.getElementById('sellContent').classList.add('hidden');
+            this.classList.add('bg-gray-700', 'text-white');
+            document.getElementById('sellButton').classList.remove('bg-gray-700', 'text-white');
+        });
+
+        document.getElementById('sellButton').addEventListener('click', function() {
+            document.getElementById('sellContent').classList.remove('hidden');
+            document.getElementById('buyContent').classList.add('hidden');
+            this.classList.add('bg-gray-700', 'text-white');
+            document.getElementById('buyButton').classList.remove('bg-gray-700', 'text-white');
+        });
     </script>
   </body>
 </html>
