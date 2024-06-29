@@ -649,32 +649,8 @@ video {
   bottom: 0px;
 }
 
-.-bottom-5 {
-  bottom: -1.25rem;
-}
-
-.-left-5 {
-  left: -1.25rem;
-}
-
-.-left-\[10\%\] {
-  left: -10%;
-}
-
-.-right-\[10\%\] {
-  right: -10%;
-}
-
-.-top-5 {
-  top: -1.25rem;
-}
-
 .bottom-0 {
   bottom: 0px;
-}
-
-.bottom-20 {
-  bottom: 5rem;
 }
 
 .left-4 {
@@ -689,20 +665,20 @@ video {
   right: 0px;
 }
 
+.right-4 {
+  right: 1rem;
+}
+
+.right-\[-300px\] {
+  right: -300px;
+}
+
 .top-0 {
   top: 0px;
 }
 
 .top-5 {
   top: 1.25rem;
-}
-
-.top-\[50\%\] {
-  top: 50%;
-}
-
-.-z-40 {
-  z-index: -40;
 }
 
 .z-50 {
@@ -836,6 +812,10 @@ video {
   display: none;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
 .h-12 {
   height: 3rem;
 }
@@ -846,14 +826,6 @@ video {
 
 .h-24 {
   height: 6rem;
-}
-
-.h-28 {
-  height: 7rem;
-}
-
-.h-36 {
-  height: 9rem;
 }
 
 .h-4 {
@@ -872,10 +844,6 @@ video {
   height: 2rem;
 }
 
-.h-dvh {
-  height: 100dvh;
-}
-
 .h-full {
   height: 100%;
 }
@@ -884,20 +852,16 @@ video {
   height: 100vh;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
 .w-12 {
   width: 3rem;
 }
 
 .w-16 {
   width: 4rem;
-}
-
-.w-24 {
-  width: 6rem;
-}
-
-.w-28 {
-  width: 7rem;
 }
 
 .w-36 {
@@ -1185,11 +1149,6 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-blue-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 64 175 / var(--tw-bg-opacity));
-}
-
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -1322,11 +1281,6 @@ video {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 
 .pb-10 {
@@ -1536,16 +1490,6 @@ video {
   outline-offset: 2px;
 }
 
-.blur-3xl {
-  --tw-blur: blur(64px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.blur-\[114px\] {
-  --tw-blur: blur(114px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .duration-1000 {
   transition-duration: 1000ms;
 }
@@ -1660,6 +1604,10 @@ video {
 
   .lg\:block {
     display: block;
+  }
+
+  .lg\:flex {
+    display: flex;
   }
 
   .lg\:hidden {

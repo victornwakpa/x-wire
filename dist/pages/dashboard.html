@@ -14,12 +14,12 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
     />
   </head>
-  <body class="bg-bgColor dark:bg-bgColord">
-    <div class="flex">
+  <body class="bg-bgColor dark:bg-bgColord scrollable-content">
+    <div class="lg:flex relative">
       <!--  ============= SIDEBART START ============== -->
       <div class="z-[100]">
         <span
-          class="absolute z-50 text-white text-4xl top-5 left-4 cursor-pointer"
+          class="absolute z-50 lg:hidden text-white text-4xl top-5 right-4 cursor-pointer "
           onclick="Openbar()"
         >
           <i
@@ -27,7 +27,7 @@
           ></i>
         </span>
         <div
-          class="sidebar z-50 fixed lg:relative top-0 bottom-0 lg:left-0 left-[-300px] p-2 w-[300px] lg:w-[280px] overflow-y-auto text-center bg-primary-20 dark:bg-primary-d20 shadow h-screen"
+          class="sidebar z-50 fixed lg:relative top-0 bottom-0 lg:left-0 right-[-300px] p-2 w-[300px] lg:w-[280px] overflow-y-auto text-center bg-primary-20 dark:bg-primary-d20 shadow h-screen"
         >
           <div class="text-gray-100 text-xl">
             <div class="p-2.5 mt-1 flex items-center rounded-md">
@@ -105,9 +105,12 @@
       </div>
       <!-- ========== SIDEBAR END ============= -->
 
-      <div class="container mt-16 lg:mt-2 flex-1 pb-8 lg:pb-0">
+      <div class="container lg:mt-2 flex-1 pb-8 lg:pb-0 overflow-x-auto h-screen">
         <div class="flex justify-between mt-4 px-5">
           <div class="text-gray-10 dark:text-white">
+            <div class="w-10 h-10 rounded-full overflow-hidden">
+              <img class="w-full object-cover" src="../assets/passport-2.jpg" alt="website logo" />
+            </div>
             <p class="font-semibold lg:font-bold text-base lg:text-3xl">
               Sunshine!
             </p>
@@ -118,7 +121,7 @@
             </p>
           </div>
 
-          <div class="">
+          <div class="hidden lg:block">
             <i data-lucide="bell" class="text-primary w-8 h-8"></i>
           </div>
         </div>
@@ -164,7 +167,9 @@
         </div>
 
         <div class="my-5 px-5">
-          <h2 class="text-base mb-1 lg:mt-0 lg:text-2xl dark:text-white font-bold">
+          <h2
+            class="text-base mb-1 lg:mt-0 lg:text-2xl dark:text-white font-bold"
+          >
             Quick Actions
           </h2>
           <div
@@ -193,7 +198,11 @@
             <div class="grid gap-3 mt-2" id="transactionsList">
               <!-- TRANSACTION ITEMS HERE -->
             </div>
-            <p class="py-5 px-5 bg-white text-primary text-base text-center uppercase font-bold">transaction history</p>
+            <p
+              class="py-5 px-5 bg-white text-primary text-base text-center uppercase font-bold"
+            >
+              transaction history
+            </p>
           </div>
         </div>
       </div>
