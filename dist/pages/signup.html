@@ -6,69 +6,96 @@
     <title>Signup</title>
     <link rel="stylesheet" href="../output.css" />
   </head>
-  <body class="overflow-x-hidden">
+  <body class="">
     <div
-      class="container relative flex flex-col items-center overflow-x-hidden justify-center py-12 px-5"
+      class="relative flex items-center justify-center py-12 lg:py-0 lg:px-0 px-5"
     >
-      <div class="flex justify-center items-center w-36">
+      <div class="lg:w-1/2 lg:overflow-y-auto lg:h-screen scroll-bar divide-y-4">
+        <div class="flex justify-center">
+          <div
+            class="lg:px-6 lg:mx-6 lg:rounded-lg max-w-xl lg:my-12 lg:py-6 lg:shadow-md lg:border border-gray-200"
+          >
+            <div class="flex justify-center items-center w-full">
+              <img
+                class=""
+                src="../assets/logo-light.png"
+                alt="website logo"
+                class="w-36"
+              />
+            </div>
+            <div class="text-center mt-3">
+              <h1 class="text-2xl lg:text-3xl font-bold">
+                Create Your Account
+              </h1>
+              <p class="text-sm lg:text-base text-lighter mt-2">
+                Register to enjoy our wondeful services
+              </p>
+            </div>
+
+            <form action="" class="mt-8">
+              <label for="email" class="text-[12px] lg:text-base text-lighter"
+                >Full Name</label
+              >
+              <input type="text" id="fullname" class="input-primary" />
+
+              <label for="email" class="text-[12px] lg:text-base text-lighter"
+                >Phone Number</label
+              >
+              <input type="text" id="phoneno" class="input-primary" />
+
+              <label for="email" class="text-[12px] lg:text-base text-lighter">Email</label>
+              <input type="text" id="email" class="input-primary" />
+
+              <label for="email" class="text-[12px] lg:text-base text-lighter"
+                >Password</label
+              >
+              <input type="text" id="pwd" class="input-primary" />
+
+              <label for="password" class="text-[12px] lg:text-base text-lighter"
+                >Confirm Password</label
+              >
+              <input type="text" id="confirmpwd" class="input-primary" />
+
+              <div class="mb-5">
+                <input type="checkbox" name="terms" id="terms" />
+                <label for="terms"
+                  >I understood the
+                  <span class="text-secondary">terms & policy.</span></label
+                >
+              </div>
+
+              <button class="btn-primary">Log In</button>
+            </form>
+
+            <p class="my-5 text-center text-sm">Or Sign In With</p>
+
+            <button
+              class="btn-primary bg-white border text-[#222222] flex items-center justify-center gap-2"
+            >
+              <img
+                class=""
+                src="../assets/google-logo.png"
+                alt="website logo"
+              />
+              <span>Google</span>
+            </button>
+            <p class="text-sm mt-5 text-center">
+              Don't have an account?
+              <span class="font-bold text-secondary">Sign Up</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/2 bg-black hidden h-screen lg:block">
         <img
-          class=""
-          src="../assets/logo-light.png"
+          src="../assets/smiling-guy.webp"
           alt="website logo"
-          class=""
+          class="object-cover h-full"
         />
       </div>
-      <div class="text-center mt-3">
-        <h1 class="text-2xl font-bold">Create Your Account</h1>
-        <p class="text-sm text-lighter mt-2">Register to enjoy our wondeful services </p>
-      </div>
-
-      <form action="" class="mt-8">
-        <label for="email" class="text-[12px] text-lighter">Full Name</label>
-        <input type="text" id="fullname" class="input-primary" />
-
-        <label for="email" class="text-[12px] text-lighter">Phone Number</label>
-        <input type="text" id="phoneno" class="input-primary" />
-
-        <label for="email" class="text-[12px] text-lighter">Email</label>
-        <input type="text" id="email" class="input-primary" />
-
-        <label for="email" class="text-[12px] text-lighter">Password</label>
-        <input type="text" id="pwd" class="input-primary" />
-
-        <label for="password" class="text-[12px] text-lighter"
-          >Confirm Password</label
-        >
-        <input type="text" id="confirmpwd" class="input-primary" />
-
-        <div class="mb-5">
-          <input type="checkbox" name="terms" id="terms" />
-          <label for="terms"
-            >I understood the
-            <span class="text-secondary">terms & policy.</span></label
-          >
-        </div>
-
-        <button class="btn-primary">Log In</button>
-      </form>
-
-      <p class="my-5 text-center">Or Sign In With</p>
-
-      <button
-        class="btn-primary bg-white border text-[#222222] flex items-center justify-center gap-2"
-      >
-        <img class="" src="../assets/google-logo.png" alt="website logo" />
-        <span>Google</span>
-      </button>
-      <p class="text-sm mt-5 text-center">
-        Don't have an account?
-        <span class="font-bold text-secondary">Sign Up</span>
-      </p>
-
-      <div class="w-28 h-28 bg-primary absolute -top-5 -left-5 rounded-full -z-40 blur-3xl"></div>
-      <div class="w-36 h-36 bg-blue-800 absolute top-[50%] -left-[10%] rounded-full -z-40 blur-[114px]"></div>
-      <div class="w-28 h-28 bg-primary absolute -bottom-5 -right-[10%] rounded-full -z-40 blur-3xl"></div>
-      <div class="w-28 h-28 bg-blue-800 absolute bottom-20 -right-[10%] rounded-full -z-40 blur-[114px]"></div>
+      <div
+        class="absolute top-0 z-[-2] lg:h-screen h-full w-screen rotate-180 transform bg-white bg-[radial-gradient(60%_120%_at_50%_50%,hsla(0,0%,100%,0)_0,rgba(252,205,238,.5)_100%)]"
+      ></div>
     </div>
   </body>
 </html>

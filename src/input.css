@@ -13,3 +13,27 @@
     @apply hidden;
   }
 }
+
+.scrollable-content::-webkit-scrollbar {
+  display: none;
+}
+.scroll-bar::-webkit-scrollbar {
+  height: 10px;
+}
+.scroll-bar::-webkit-scrollbar-track {
+  background: #FFEAEA;
+}
+.scroll-bar::-webkit-scrollbar-thumb {
+  background-color: #fc9696;
+  border-radius: 20px;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFEAEA;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #80d85d;
+  border-radius: 20px;
+}
